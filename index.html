@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    
+        <h1>Fill in your Biodata</h1>
+        <form id="form" action="#" method="post">
+
+            <!-- for the name input -->
+            <label for="name1">First name</label>
+            <input class="input-field" type="text" id="name1" placeholder="Sunday" required>
+            
+            <label for="name2">Middle name</label>
+            <input class="input-field" type="text" id="name2" placeholder="Middlename">
+            
+            <label for="name3">Last name</label>
+            <input class="input-field" type="text" id="name3" required placeholder="Okon">
+
+
+            <!-- for the email input -->
+            <label for="email">
+                Email Address
+            </label>
+            <input class="input-field" type="email" id="email" placeholder="sundayokon@gmail.com" required>
+
+
+            <!-- for the phone input -->
+            <label for="phone-number">
+                Phone number
+            </label>
+            <input class="input-field" type="tel" id="phone-number" placeholder="09063482828" required>
+           
+            <!--for the gender check  -->
+            <label for="sex" >Gender</label>
+            <div id="gender">
+                
+            <label for="sex-male"  class="gender">Male</label>
+            <input type="radio" id="sex" name="sex">
+            <label for="sex-female" class="gender" id="fm">Female</label>
+            <input type="radio" id="sex" name="sex">
+            </div>
+
+
+            <!-- for the password input -->
+            <label for="pass">Password</label>
+            <input class="input-field" type="password" id="pass" minlength="6" placeholder="pass" required>
+
+        <div><button type="submit" id="btn">submit</button></div>
+        </form>
+
+        <!-- javascript section -->
+        <script>
+            const form = document.getElementById('form');
+            const name1 = document.getElementById('name1');
+            const name3 = document.getElementById('name3');
+            const phoneNumber = document.getElementById('phone-number');
+            const password = document.getElementById('pass');
+            form.addEventListener('submit', (e) => {
+                if(name1.value === '' || name3.value === '' || phoneNumber.value === '' || password.value === '') {
+                    alert('Submission Error')
+                } else {
+                alert('Successfully submitted')  
+                }
+            })
+        </script>
+</body>
+</html>
